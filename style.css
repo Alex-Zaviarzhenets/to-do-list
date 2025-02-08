@@ -1,5 +1,97 @@
-#addedTasks {
-  border: 1px solid black;
-  width: 300px;
-  height: 100px;
+/* Общий стиль страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
 }
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Контейнеры для задач */
+#addedTasks, #inProgress, #done {
+  border: 1px solid #ddd;
+  width: 300px;
+  min-height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#addedTasks {
+  background-color: #f9f9f9;
+}
+
+#inProgress {
+  background-color: #fffbe6;
+}
+
+#done {
+  background-color: #e0ffe0;
+}
+
+/* Стиль для каждой задачи */
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+.task button {
+  margin-left: 5px;
+}
+
+/* Выделение задач */
+.task span {
+  flex-grow: 1;
+}
+
+.task button.delete {
+  background-color: #f44336;
+}
+
+.task button.delete:hover {
+  background-color: #e53935;
+}
+  
